@@ -1,4 +1,4 @@
-# Function for the calculator
+ # Function for the calculator
 def calculate():
     print("\n--- Calculator ---")
     num1 = float(input("Enter the first number: "))
@@ -48,4 +48,4 @@ if choice == "1":
 elif choice == "2":
     mad_game()
 else:
-    print("Invalid option. Try again.")
+    print("Invalid option. Try again.") 
