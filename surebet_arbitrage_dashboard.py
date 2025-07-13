@@ -91,13 +91,24 @@ if st.session_state.logged_in and st.session_state.user_email == ADMIN_EMAIL:
         })
         st.sidebar.success(f"{email_to_activate} is now activated.")
 
-# --- LOGIN / REGISTER VIEW ---
+# --- LOGIN / REGISTER / RESET PASSWORD VIEW ---
 if not st.session_state.logged_in:
     st.title("🔐 Login to Access Surebet Calculator")
-    mode = st.radio("Choose:", ["Login", "Register"])
+    mode = st.radio("Choose:", ["Login", "Register", "Reset Password"])
     email = st.text_input("Email")
-    password = st.text_input("Password", type="password")
-    if st.button("Submit") and email and password:
+    password = st.text_input("Password", type="password") if mode != "Reset Password" else ""
+
+    if mode == "Reset Password" and email:
+        new_password = st.text_input("New Password", type="password")
+        if st.button("Reset Password"):
+            user = get_user(email)
+            if not user:
+                st.warning("No account found for this email.")
+            else:
+                update_user(email, {"password": hash_password(new_password)})
+                st.success("Password updated. You can now login.")
+
+    elif st.button("Submit") and email and password:
         user = get_user(email)
         if mode == "Register":
             if user:
@@ -112,7 +123,7 @@ if not st.session_state.logged_in:
                     "is_affiliate": False
                 })
                 st.success("Account created. Please login.")
-        else:
+        elif mode == "Login":
             if not user or user["password"] != hash_password(password):
                 st.error("Invalid credentials.")
             else:
