@@ -1,0 +1,11 @@
+date,symbol,direction,entry,exit,lot,rr,sl_hit,tp_hit,outcome,profit_loss_usc,comments
+2025-07-01,EURUSD,Buy,1.0700,1.0750,0.10,1:2,No,Yes,Win,50,Good OB reaction
+2025-07-01,USDJPY,Sell,160.50,160.00,0.20,1:3,No,Yes,Win,100,Entered after news dump
+2025-07-02,NAS100,Buy,19000,19100,0.01,1:2,No,Yes,Win,100,High momentum after NY open
+2025-07-02,GBPUSD,Sell,1.2800,1.2850,0.05,1:2,Yes,No,Loss,-25,Missed London structure
+2025-07-02,AUDUSD,Buy,0.6600,0.6620,0.10,1:1,No,Yes,Win,20,Bounce off H4 demand
+2025-07-03,GOLD,Sell,2360,2370,0.02,1:3,Yes,No,Loss,-20,FOMO entry no setup
+2025-07-03,EURJPY,Buy,165.00,165.50,0.05,1:2,No,Yes,Win,25,Clean CHoCH and breaker
+2025-07-03,GBPJPY,Buy,200.00,199.50,0.10,1:3,Yes,No,Loss,-50,Emotional hold too long
+2025-07-04,CADJPY,Sell,112.00,111.50,0.05,1:2.5,No,Yes,Win,25,Macro trend + sentiment
+2025-07-04,AUDCHF,Buy,0.5900,0.5880,0.20,1:1.5,Yes,No,Loss,-40,Overtraded low volume
