@@ -194,4 +194,3 @@ if st.session_state.logged_in:
                 "Stake (KES)": [round(stake_home, 2), round(stake_draw, 2), round(stake_away, 2)],
                 "Payout (KES)": [round(payout_home, 2), round(payout_draw, 2), round(payout_away, 2)]
             })
-            #
